@@ -1,4 +1,4 @@
-import pyrealsense2 as rs
+import pyrealsense2.pyrealsense2 as rs
 import numpy as np
 import cv2
 import tensorflow as tf
@@ -50,6 +50,7 @@ while True:
     frames = pipeline.wait_for_frames()
     frames = aligned_stream.process(frames)
     depth_frame = frames.get_depth_frame()
+    zDepth = depth_frame.get_distance(int(W),int(H))
     color_frame = frames.get_color_frame()
     points = point_cloud.calculate(depth_frame)
     verts = np.asanyarray(points.get_vertices()).view(np.float32).reshape(-1, W, 3)  # xyz
@@ -70,7 +71,7 @@ while True:
 
     print("[INFO] drawing bounding box on detected objects...")
     print("[INFO] each detected object has a unique color")
-
+    print(zDepth)
     for idx in range(int(num)):
         class_ = classes[idx]
         score = scores[idx]
