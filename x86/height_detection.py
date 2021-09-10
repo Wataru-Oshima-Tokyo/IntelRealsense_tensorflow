@@ -85,7 +85,7 @@ while True:
 
             width = right - left
             height = bottom - top
-            zDepth = depth_frame.get_distance(int(10),int(10))
+            zDepth = depth_frame.get_distance(int(0),int(0))
             print(zDepth)
             bbox = (int(left), int(top), int(width), int(height))
             p1 = (int(bbox[0]), int(bbox[1]))
