@@ -71,7 +71,6 @@ while True:
 
     print("[INFO] drawing bounding box on detected objects...")
     print("[INFO] each detected object has a unique color")
-    print(zDepth)
     for idx in range(int(num)):
         class_ = classes[idx]
         score = scores[idx]
