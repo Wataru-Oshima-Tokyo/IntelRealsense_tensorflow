@@ -20,7 +20,7 @@ aligned_stream = rs.align(rs.stream.color) # alignment between color and depth
 point_cloud = rs.pointcloud()
 
 print("[INFO] loading model...")
-PATH_TO_CKPT = r"frozen_inference_graph.pb"
+PATH_TO_CKPT = r"../frozen_inference_graph.pb"
 # download model from: https://github.com/opencv/opencv/wiki/TensorFlow-Object-Detection-API#run-network-in-opencv
 
 # Load the Tensorflow model into memory.
