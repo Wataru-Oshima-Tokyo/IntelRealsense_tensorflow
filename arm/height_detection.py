@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 import tensorflow as tf
 
-W = 848
+W = 640
 H = 480
 
 # Configure depth and color streams
